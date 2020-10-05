@@ -17,4 +17,12 @@ const global_package_setup = [
             VegaLite.@vlplot(:point, x = data.x, y = data.y)
         end,
     ),
+    (
+        name = :Plots,
+        compile_commands = quote
+            plot(rand(10), rand(10))
+            scatter(rand(10), rand(10))
+            histogram(rand(10))
+        end
+    )
 ]
