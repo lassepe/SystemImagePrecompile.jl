@@ -3,9 +3,6 @@ const global_package_setup = [
             BenchmarkTools.@benchmark sum(1:10)
         end),
     (name = :Debugger, compile_commands = quote end),
-    (name = :JuliaFormatter, compile_commands = quote
-        JuliaFormatter.format(".")
-    end),
     (name = :OhMyREPL, compile_commands = quote
             OhMyREPL.enable_autocomplete_brackets(true)
         end),
@@ -20,9 +17,9 @@ const global_package_setup = [
     (
         name = :Plots,
         compile_commands = quote
-            plot(rand(10), rand(10))
-            scatter(rand(10), rand(10))
-            histogram(rand(10))
+            Plots.plot(rand(10), rand(10))
+            Plots.scatter(rand(10), rand(10))
+            Plots.histogram(rand(10))
         end
     )
 ]

@@ -10,11 +10,11 @@
 ### ZSH/BASH Convenience Functions
 
 ```bash
-alias j="JULIA_NUM_THREADS=10 julia --depwarn=yes"
+alias j="MESA_LOADER_DRIVER_OVERRIDE=i965 JULIA_NUM_THREADS=10 julia --depwarn=yes"
 alias jp="j --project"
 function jd {
-  julia_version=$(julia --version |  cut -d' ' -f3)
-  j --sysimage="${PATH_TO_THIS_REPO}/$julia_version-dev.sysimg.so" "$@"
+  julia_version=$(julia -e "println(VERSION)" |  cut -d' ' -f3)
+  j --sysimage="$HOME/worktree/SysImagePrecompile.jl/$julia_version-dev.sysimg.so" "$@"
 }
 alias jpd="jd --project"
 ```
