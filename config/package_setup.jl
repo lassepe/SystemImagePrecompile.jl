@@ -3,7 +3,6 @@ const package_setup = [
         BenchmarkTools.@benchmark sum(1:10)
     end),
     (name = :Debugger, compile_commands = quote end),
-    (name = :ElectronDisplay, compile_commands = quote end),
     (name = :OhMyREPL, compile_commands = quote
         OhMyREPL.enable_autocomplete_brackets(true)
     end),
@@ -17,4 +16,10 @@ const package_setup = [
         Plots.scatter(rand(10), rand(10))
         Plots.histogram(rand(10))
     end),
+    (name = :Plotly, compile_commands = quote
+     Plots.plotly()
+     Plots.plot(rand(10), rand(10))
+     Plots.scatter(rand(10), rand(10))
+     Plots.histogram(rand(10))
+     end)
 ]
