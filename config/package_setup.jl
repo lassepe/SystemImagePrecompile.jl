@@ -1,4 +1,4 @@
-const global_package_setup = [
+const package_setup = [
     (name = :BenchmarkTools, compile_commands = quote
         BenchmarkTools.@benchmark sum(1:10)
     end),

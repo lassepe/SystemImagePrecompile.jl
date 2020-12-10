@@ -2,19 +2,20 @@
 
 ### Usage
 
-1. enlist the packages and commands you want to install globally and pre-compile in `global_package_setup.jl`
-2. install all the dependencies via `./install_global_packages.jl`
-3. pre-compile a system-image via `./precompile.jl`; This will create a system image as `<julia_version>-dev.sysimg.so`
+1. Add all packages and commands you want to install and pre-compile in
+   `config/package_setup.jl`
+2. install all the packages via `bin/install_packages.jl`
+3. pre-compile a system-image for the packages and commands listed in
+   `config/package_setup.jl` by running `bin/precompile.jl`. This will create
+   a system image in `build/<julia_version>-dev.sysimg.so`
 
 
-### ZSH/BASH Convenience Functions
+### ZSH Convenience Functions / Aliases
 
-```bash
-alias j="MESA_LOADER_DRIVER_OVERRIDE=i965 JULIA_NUM_THREADS=10 julia --depwarn=yes"
-alias jp="j --project"
-function jd {
-  julia_version=$(julia -e "println(VERSION)" |  cut -d' ' -f3)
-  j --sysimage="$HOME/worktree/SysImagePrecompile.jl/$julia_version-dev.sysimg.so" "$@"
-}
-alias jpd="jd --project"
-```
+Source the script `shell/julia_shell_convenience.sh` in you `zsh.rc`. This will
+provide four commands:
+
+- `j`: runs `julia`
+- `jp`: runs `julia --project`
+- `jd`: runs `julia` with the corresponding system image from `build/`
+- `jpd`: runs `jd --project`
