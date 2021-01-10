@@ -1,4 +1,4 @@
-# SysImagePrecompile.jl
+# SystemImagePrecompile.jl
 
 ### Usage
 
