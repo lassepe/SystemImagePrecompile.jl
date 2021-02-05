@@ -7,10 +7,6 @@ const package_setup = [
         OhMyREPL.enable_autocomplete_brackets(true)
     end),
     (name = :Revise, compile_commands = quote end),
-    (name = :VegaLite, compile_commands = quote
-        data = (; x = rand(10), y = rand(10))
-        VegaLite.@vlplot(:point, x = data.x, y = data.y)
-    end),
     (name = :Plots, compile_commands = quote
         Plots.plot(rand(10), rand(10))
         Plots.scatter(rand(10), rand(10))
