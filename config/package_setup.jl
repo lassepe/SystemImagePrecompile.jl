@@ -7,15 +7,10 @@ const package_setup = [
         OhMyREPL.enable_autocomplete_brackets(true)
     end),
     (name = :Revise, compile_commands = quote end),
-    (name = :Plots, compile_commands = quote
-        Plots.plot(rand(10), rand(10))
-        Plots.scatter(rand(10), rand(10))
-        Plots.histogram(rand(10))
-    end),
-    (name = :Plotly, compile_commands = quote
-     Plots.plotly()
-     Plots.plot(rand(10), rand(10))
-     Plots.scatter(rand(10), rand(10))
-     Plots.histogram(rand(10))
-     end)
+    (
+        name = :VegaLite,
+        compile_commands = quote
+            data = [(; x, y = sin(x)) for x in rand(10)] |> VegaLite.@vlplot(:point, :x, :y)
+        end,
+    ),
 ]
