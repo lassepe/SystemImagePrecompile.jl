@@ -6,11 +6,5 @@ const package_setup = [
     (name = :OhMyREPL, compile_commands = quote
         OhMyREPL.enable_autocomplete_brackets(true)
     end),
-    (name = :Revise, compile_commands = quote end),
-    (
-        name = :VegaLite,
-        compile_commands = quote
-            data = [(; x, y = sin(x)) for x in rand(10)] |> VegaLite.@vlplot(:point, :x, :y)
-        end,
-    ),
+    (name = :Revise, compile_commands = quote end)
 ]
