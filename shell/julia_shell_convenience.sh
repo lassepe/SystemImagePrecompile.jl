@@ -4,7 +4,7 @@
 SYSIMGPRECOMPILE_ROOT_DIR="$(realpath $(dirname ${(%):-%N})/..)"
 
 # NOTE: MESA_LOADER_DRIVER_OVERRIDE=i965 is a fix for https://github.com/JuliaPlots/Makie.jl/issues/630
-alias j="JULIA_NUM_THREADS=10 julia"
+alias j="julia"
 alias jp="j --project"
 function jd {
   julia_version=$(julia -e "println(VERSION)" |  cut -d' ' -f3)
