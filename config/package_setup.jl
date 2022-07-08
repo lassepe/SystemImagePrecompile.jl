@@ -7,4 +7,7 @@ const package_setup = [
         BenchmarkTools.@benchmark sum(1:10)
     end),
     (name = :Infiltrator, compile_commands = quote end),
+    (name = :GLMakie, compile_commands = quote
+        GLMakie.scatter([1]) |> display
+    end)
 ]
