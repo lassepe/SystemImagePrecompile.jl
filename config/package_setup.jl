@@ -9,5 +9,6 @@ const package_setup = [
     (name = :Infiltrator, compile_commands = quote end),
     (name = :GLMakie, compile_commands = quote
         GLMakie.scatter([1]) |> display
-    end)
+    end),
+    (name = :TestEnv, compile_commands = quote end)
 ]
