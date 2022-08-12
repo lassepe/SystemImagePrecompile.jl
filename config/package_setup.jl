@@ -10,5 +10,6 @@ const package_setup = [
     (name = :GLMakie, compile_commands = quote
         GLMakie.scatter([1]) |> display
     end),
-    (name = :TestEnv, compile_commands = quote end)
+    (name = :TestEnv, compile_commands = quote end),
+    (name = :Symbolics, compile_commands = quote end)
 ]
