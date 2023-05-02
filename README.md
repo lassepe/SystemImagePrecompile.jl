@@ -4,9 +4,9 @@
 
 1. Add all packages and commands you want to install and pre-compile in
    `config/package_setup.jl`
-2. install all the packages via `bin/install_packages.jl`
+2. install all the packages via `src/install_packages.jl`
 3. pre-compile a system-image for the packages and commands listed in
-   `config/package_setup.jl` by running `bin/precompile.jl`. This will create
+   `config/package_setup.jl` by running `src/precompile.jl`. This will create
    a system image in `build/<julia_version>-dev.sysimg.so`
 
 
