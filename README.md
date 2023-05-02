@@ -7,7 +7,7 @@
 2. install all the packages via `src/install_packages.jl`
 3. pre-compile a system-image for the packages and commands listed in
    `config/package_setup.jl` by running `src/precompile.jl`. This will create
-   a system image in `build/<julia_version>-dev.sysimg.so`
+   a system image in `builds/<julia_version>-dev.sysimg.so`
 
 
 ### ZSH Convenience Functions / Aliases
@@ -17,5 +17,5 @@ provide four commands:
 
 - `j`: runs `julia`
 - `jp`: runs `julia --project`
-- `jd`: runs `julia` with the corresponding system image from `build/`
+- `jd`: runs `julia` with the corresponding system image from `builds/`
 - `jpd`: runs `jd --project`
