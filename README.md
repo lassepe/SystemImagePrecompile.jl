@@ -12,7 +12,7 @@
 
 ### ZSH Convenience Functions / Aliases
 
-Source the script `shell/julia_shell_convenience.sh` in you `zsh.rc`. This will
+Source the script `shell/julia_shell_convenience.sh` in your `zsh.rc`. This will
 provide four commands:
 
 - `j`: runs `julia`
