@@ -5,7 +5,7 @@ export JULIA_SYSIMAGE_LIB_DIR="$(realpath $(dirname ${(%):-%N})/../builds)"
 export JULIA_BIN=$(which julia)
 # NOTE: MESA_LOADER_DRIVER_OVERRIDE=i965 is a fix for https://github.com/JuliaPlots/Makie.jl/issues/630
 function julia {
-  $JULIA_BIN $JULIAUP_CHANNEL $@
+  $JULIA_BIN $@
 }
 
 alias j=julia
