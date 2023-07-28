@@ -4,8 +4,4 @@ const package_setup = [
         OhMyREPL.enable_autocomplete_brackets(true)
     end),
     (name=:Infiltrator, compile_commands=quote end),
-    (name=:GLMakie, compile_commands=quote
-        GLMakie.scatter([1]) |> display
-    end),
-    (name=:Symbolics, compile_commands=quote end)
 ]
